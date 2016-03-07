@@ -62,10 +62,24 @@ test  = (test[0] ,linit(test[1]))
 ########################################################################
 
 # try different combos here
-net = theanets.Classifier([11,30,30,30,30,30,30,2])
+archi=1;
+print "Architecture 1: [11,15,15,15,2]"
+print "Architecture 2: [11,30,30,30,2]"
+print "Architecture 3: [11,30,30,30,30,30,30,2]"
+archi = input('choose one of these three architecture(input 1, 2 or 3):')
+if archi==2:
+	architecture = '[11,30,30,30,2]'
+	net = theanets.Classifier([11,30,30,30,2])
+elif archi==3:
+	architecture = '[11,30,30,30,30,30,30,2]'
+	net = theanets.Classifier([11,30,30,30,30,30,30,2])
+else:
+	architecture = '[11,15,15,15,2]'
+	net = theanets.Classifier([11,15,15,15,2])
+
 net.train(train, valid, algo='layerwise', max_updates=mupdates, patience=1)
 #net.train(train, valid, algo='rprop',     max_updates=mupdates, patience=1)
-
+print architecture
 print "Learner on the test set"
 classify = net.classify(test[0])
 print "%s / %s " % (sum(classify == test[1]),len(test[1]))
