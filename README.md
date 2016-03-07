@@ -6,3 +6,5 @@
   The url for the data set is http://archive.ics.uci.edu/ml/datasets/Wine+Quality
   
   theautil.py is downloaded from https://github.com/abramhindle/theanets-tutorial
+  
+  a3.py is modified from slice-classifier.py which is downloaded from https://github.com/abramhindle/theanets-tutorial
