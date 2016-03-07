@@ -36,7 +36,7 @@ import theautil
 logging.basicConfig(stream = sys.stderr, level=logging.INFO)
 
 mupdates = 1000
-data = np.loadtxt("ILPD.csv",delimiter=",")
+data = np.loadtxt("winequality-red.csv",delimiter=";")
 inputs  = data[0:,0:11].astype(np.float32)
 outputs = data[0:,11:12].astype(np.int32)
 for i in range(len(outputs)):
