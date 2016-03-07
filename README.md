@@ -4,3 +4,5 @@
   My assignment file is a3.py
   
   The url for the data set is http://archive.ics.uci.edu/ml/datasets/Wine+Quality
+  
+  theautil.py is downloaded from https://github.com/abramhindle/theanets-tutorial
